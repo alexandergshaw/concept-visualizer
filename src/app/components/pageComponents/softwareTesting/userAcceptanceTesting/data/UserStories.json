@@ -1,0 +1,37 @@
+{
+    "userStories": [
+      {
+        "id": 1,
+        "title": "Add a Task",
+        "asA": "user",
+        "iWant": "to add new tasks to my list",
+        "soThat": "I can remember what I need to do",
+        "status": "Done"
+      },
+      {
+        "id": 2,
+        "title": "Mark Tasks as Complete",
+        "asA": "user",
+        "iWant": "to mark tasks as done",
+        "soThat": "I can track my progress",
+        "status": "Done"
+      },
+      {
+        "id": 3,
+        "title": "Filter and Manage Tasks",
+        "asA": "user",
+        "iWant": "to filter tasks by status and clear completed ones",
+        "soThat": "I can focus only on what’s still active",
+        "status": "Done"
+      },
+      {
+        "id": 4,
+        "title": "Set Task Priority",
+        "asA": "user",
+        "iWant": "to assign priority levels to tasks",
+        "soThat": "I can focus on what’s most important first",
+        "status": "Done"
+      }
+    ]
+  }
+  

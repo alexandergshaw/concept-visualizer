@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import SqlPage from '../../../../components/languages/SqlPage';
+import SqlPage from '../../../../components/pageComponents/SqlPage';
 
 export default function Page() {
   return (

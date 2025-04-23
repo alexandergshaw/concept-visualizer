@@ -1,7 +1,5 @@
-// app/languages/javascript/page.tsx or .jsx
-
+import JavaScriptPage from '@/components/pageComponents/javaScript/JavaScriptPage';
 import { Suspense } from 'react';
-import JavaScriptPage from '../../../../components/languages/JavaScript/JavaScriptPage';
 
 export default function Page() {
   return (

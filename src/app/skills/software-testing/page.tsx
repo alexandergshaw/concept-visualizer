@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
-import TypeScriptPage from '../../../../components/pageComponents/TypeScriptPage';
+import SoftwareTestingPage from '../../../../components/pageComponents/softwareTesting/SoftwareTestingPage';
 
 export default function Page() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <TypeScriptPage />
+      <SoftwareTestingPage/>
     </Suspense>
   );
 }

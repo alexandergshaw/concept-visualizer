@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import PhpPage from '../../../../components/languages/PhpPage';
+import PhpPage from '../../../../components/pageComponents/PhpPage';
 
 export default function Page() {
   return (

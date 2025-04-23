@@ -1,0 +1,16 @@
+.double-column {
+    display: flex;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #ddd;
+}
+
+.half-width {
+    width: 50%;
+}

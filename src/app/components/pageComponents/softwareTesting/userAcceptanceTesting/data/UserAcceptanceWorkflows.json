@@ -1,0 +1,73 @@
+{
+    "uatWorkflows": [
+      {
+        "category": "Core",
+        "id": 1,
+        "title": "Add a Task",
+        "goal": "Ensure the user can add a new task with a priority.",
+        "steps": [
+          "Type a task description in the input.",
+          "Select a priority (e.g., 'High').",
+          "Click 'Add'."
+        ],
+        "expectedResult": "The task appears in the list with the correct text and priority label."
+      },
+      {
+        "category": "Core",
+        "id": 2,
+        "title": "Mark a Task as Complete",
+        "goal": "Verify that tasks can be marked done.",
+        "steps": [
+          "Add a task.",
+          "Click its checkbox."
+        ],
+        "expectedResult": "The task text has a line-through and the color fades to indicate completion."
+      },
+      {
+        "category": "Core",
+        "id": 3,
+        "title": "Edit a Task",
+        "goal": "Allow users to change the task text.",
+        "steps": [
+          "Click the edit icon.",
+          "Modify the text in the input.",
+          "Click the save icon."
+        ],
+        "expectedResult": "The updated task text is reflected in the list."
+      },
+      {
+        "category": "Core",
+        "id": 4,
+        "title": "Filter Tasks",
+        "goal": "View tasks based on their status.",
+        "steps": [
+          "Add multiple tasks.",
+          "Mark some as done.",
+          "Click 'Active' and 'Completed' filters."
+        ],
+        "expectedResult": "The filtered list updates accordingly."
+      },
+      {
+        "category": "Core",
+        "id": 5,
+        "title": "Clear Completed",
+        "goal": "Remove all completed tasks in one action.",
+        "steps": [
+          "Mark some tasks as complete.",
+          "Click 'Clear Completed'."
+        ],
+        "expectedResult": "Only incomplete tasks remain."
+      },
+      {
+        "category": "Edge",
+        "id": 6,
+        "title": "Add Long Task Descriptions",
+        "goal": "Check layout and text wrapping.",
+        "steps": [
+          "Add a task with a very long description."
+        ],
+        "expectedResult": "Text wraps cleanly, layout does not break."
+      }
+    ]
+  }
+  
