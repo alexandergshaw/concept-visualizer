@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import '../../../styles/array.css';
 import ConceptWrapper from '../../common/ConceptWrapper';
+import { Typography } from '@mui/material';
 
 const OPERATIONS = [
   'push',
@@ -56,7 +57,7 @@ export default function ArrayConcept({
         if (!isNaN(numInput)) {
           copy.push(numInput);
           setArr(copy);
-          onCodeChange?.(`let array = [${original.join(', ')}];\narray.push(${numInput});`);
+          onCodeChange?.(`let array = [${original.join(', ')}];\narray.push(${numInput});\n// Updated array: [${copy.join(', ')}]`);
         }
         break;
 
@@ -70,7 +71,7 @@ export default function ArrayConcept({
         if (!isNaN(numInput)) {
           copy = [numInput, ...copy];
           setArr(copy);
-          onCodeChange?.(`let array = [${original.join(', ')}];\narray.unshift(${numInput});`);
+          onCodeChange?.(`let array = [${original.join(', ')}];\narray.unshift(${numInput});\n// Updated array: [${copy.join(', ')}]`);
         }
         break;
 
@@ -78,7 +79,7 @@ export default function ArrayConcept({
         if (!isNaN(numIndex) && !isNaN(numInput)) {
           copy.splice(numIndex, 0, numInput);
           setArr(copy);
-          onCodeChange?.(`let array = [${original.join(', ')}];\narray.splice(${numIndex}, 0, ${numInput});`);
+          onCodeChange?.(`let array = [${original.join(', ')}];\narray.splice(${numIndex}, 0, ${numInput});\n// Updated array: [${copy.join(', ')}]`);
         }
         break;
 
@@ -86,7 +87,7 @@ export default function ArrayConcept({
         if (!isNaN(numIndex)) {
           const sliced = copy.slice(0, numIndex);
           setOutput(`Sliced: [${sliced.join(', ')}]`);
-          onCodeChange?.(`let array = [${original.join(', ')}];\narray.slice(0, ${numIndex});`);
+          onCodeChange?.(`let array = [${original.join(', ')}];\narray.slice(0, ${numIndex});\n// Updated array: [${copy.join(', ')}]`);
         }
         break;
 
@@ -94,7 +95,7 @@ export default function ArrayConcept({
         if (!isNaN(numInput)) {
           const idx = copy.indexOf(numInput);
           setOutput(`indexOf(${numInput}) → ${idx}`);
-          onCodeChange?.(`let array = [${original.join(', ')}];\narray.indexOf(${numInput});`);
+          onCodeChange?.(`let array = [${original.join(', ')}];\narray.indexOf(${numInput});\n// Updated array: [${copy.join(', ')}]`);
         }
         break;
 
@@ -102,7 +103,7 @@ export default function ArrayConcept({
         if (!isNaN(numInput)) {
           const idx = copy.lastIndexOf(numInput);
           setOutput(`lastIndexOf(${numInput}) → ${idx}`);
-          onCodeChange?.(`let array = [${original.join(', ')}];\narray.lastIndexOf(${numInput});`);
+          onCodeChange?.(`let array = [${original.join(', ')}];\narray.lastIndexOf(${numInput});\n// Updated array: [${copy.join(', ')}]`);
         }
         break;
 
@@ -110,7 +111,7 @@ export default function ArrayConcept({
         if (!isNaN(numInput)) {
           const exists = copy.includes(numInput);
           setOutput(`includes(${numInput}) → ${exists}`);
-          onCodeChange?.(`let array = [${original.join(', ')}];\narray.includes(${numInput});`);
+          onCodeChange?.(`let array = [${original.join(', ')}];\narray.includes(${numInput});\n// Updated array: [${copy.join(', ')}]`);
         }
         break;
 
@@ -120,7 +121,7 @@ export default function ArrayConcept({
             copy[numIndex] = numInput;
             setArr(copy);
             setOutput(`Updated index ${numIndex} to ${numInput}`);
-            onCodeChange?.(`let array = [${original.join(', ')}];\narray[${numIndex}] = ${numInput};`);
+            onCodeChange?.(`let array = [${original.join(', ')}];\narray[${numIndex}] = ${numInput};\n// Updated array: [${copy.join(', ')}]`);
           } else {
             setOutput(`Index ${numIndex} is out of bounds`);
           }
@@ -187,16 +188,9 @@ export default function ArrayConcept({
           />
         )}
 
-        <TextField
-          label="Operation Description"
-          value={getDescription(operation)}
-          size="small"
-          fullWidth
-          disabled
-          sx={{ marginTop: 1, marginBottom: 2 }}
-        />
-
-
+        <Typography variant="body2" sx={{ mt: 2, mb: 1, color: '#444' }}>
+          <strong>Operation Description:</strong> {getDescription(operation)}
+        </Typography>
 
         <Button variant="contained" onClick={runOperation}>Run</Button>
       </div>
